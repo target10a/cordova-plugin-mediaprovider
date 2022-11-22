@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-mediaprovider",
+  "version": "1.6.0",
+  "description": "Reads native text files from content URLs for Cordova platforms",
+  "cordova": {
+    "id": "cordova-plugin-mediaprovider",
+    "platforms": [
+      "android"
+    ]
+  },
+  "scripts": {
+    "version": "sync-cordova-xml package.json plugin.xml --output plugin.xml && git add plugin.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/target10a/cordova-plugin-mediaprovider.git"
+  },
+  "keywords": [
+    "cordova",
+    "file",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Christoph Völker <christoph.voelker@target10a.com>",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "sync-cordova-xml": "^0.4.0"
+  }
+}
