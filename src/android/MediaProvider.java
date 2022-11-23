@@ -1,19 +1,11 @@
 package com.target10a.cordova.mediaprovider;
 
-import android.text.TextUtils;
 import android.Manifest;
-import android.content.ContentUris;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.provider.OpenableColumns;
-import android.util.Log;
-import android.database.Cursor;
-import android.os.Build;
-import android.os.Environment;
-import android.provider.DocumentsContract;
-import android.provider.MediaStore;
 import android.content.res.AssetFileDescriptor;
+import android.net.Uri;
+import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -21,23 +13,19 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PermissionHelper;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.io.File;
-import java.nio.channels.FileChannel;
-import java.nio.ByteBuffer;
-import java.io.IOException;
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.StandardCharsets;
 
 public class MediaProvider extends CordovaPlugin {
 
-    private static final String TAG = "[MediaProvider plugin]: ";
+    private static final String TAG = "[MediaProvider]: ";
     private static final int INVALID_ACTION_ERROR_CODE = -1;
     private static CallbackContext callback;
     private static String uriStr;
@@ -87,8 +75,7 @@ public class MediaProvider extends CordovaPlugin {
         return false;
     }
 
-    public void readText() throws JSONException {
-        JSONObject resultObj = new JSONObject();
+    public void readText() {
         /* content:///... */
         Uri pvUrl = Uri.parse(this.uriStr);
 
@@ -126,8 +113,7 @@ public class MediaProvider extends CordovaPlugin {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
 
             int bufferSize = 2048;
-            if(bufferSize >channel.size())
-
+            if(bufferSize > channel.size())
             {
                 bufferSize = (int) channel.size();
             }
