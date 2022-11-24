@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mediaprovider",
-  "version": "1.6.0",
+  "version": "0.0.1",
   "description": "Reads native text files from content URLs for Cordova platforms",
   "cordova": {
     "id": "cordova-plugin-mediaprovider",

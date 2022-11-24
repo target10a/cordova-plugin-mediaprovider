@@ -187,7 +187,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2015 [Ramesh Nair](https://hiddentao.com)
+   Copyright 2022 [Christoph Völker](https://www.target10a.com)
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
